@@ -15,6 +15,11 @@
   <%= @offer.asking_price %>
 </p>
 
+<p>
+  <b>Offered by:</b>
+  <%= link_to @offer.user.name, @offer.user %>
+</p>
+
 
 <%= link_to 'Edit', edit_offer_path(@offer) %> |
 <%= link_to 'Back', offers_path %>

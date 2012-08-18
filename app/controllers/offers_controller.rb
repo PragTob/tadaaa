@@ -41,6 +41,7 @@ class OffersController < ApplicationController
   # POST /offers.json
   def create
     @offer = Offer.new(params[:offer])
+    @offer.user = current_user
 
     respond_to do |format|
       if @offer.save
