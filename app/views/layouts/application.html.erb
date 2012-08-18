@@ -7,13 +7,30 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p>
-<ul>
-  <li> <%= link_to "Sign out", destroy_user_session_path, method: :delete %> </li>
-</ul> 
+<div class="navbar">
+      <div class="navbar-inner">
+        <div class="container">
+          <%= link_to 'Tadaaa', root_path, class: 'brand'%>
 
-<%= yield %>
+          <ul class="nav">
+              <li><%= link_to 'Register', new_user_registration_path %></li>
+              <li><%= link_to 'Sign in', new_user_session_path %></li>
+              <li> <%= link_to 'Sign out', destroy_user_session_path, method: :delete %> </li>
+          </ul>
+        </div>
+      </div>
+    </div>
 
+
+<div class="container">
+  <div class="notices">
+    <% flash.each do |key, value| %>
+       <div class="alert-message <%= key %>"><%= value %></div>
+    <% end %>
+  </div>
+
+  <%= yield %>
+
+</div>
 </body>
 </html>
