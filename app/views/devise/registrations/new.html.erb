@@ -11,6 +11,18 @@
 
   <div><%= f.label :password_confirmation %><br />
   <%= f.password_field :password_confirmation %></div>
+  
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br />
+    <%= f.text_area :description %>
+  </div>
+  <div class="field">
+    <%= f.label :address %><br />
+    <%= f.text_area :address %>
 
   <div><%= f.submit "Sign up" %></div>
 <% end %>
