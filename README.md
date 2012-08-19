@@ -15,4 +15,4 @@ You can create users, users can login etc. Users can create offers (which might 
 - [carrierwave](https://github.com/jnicklas/carrierwave) - used for picture uploads
 
 ## Recruiters
-This isn't code I would actually write in an app. It's a **throwaway prototype**. There are no meaningful tests or something... it was fun anyway.
+This isn't code I would actually write in an app. It's a **throwaway prototype**. There are no meaningful tests or something... it was fun anyway. So if you want to get a sense of my coding please check out other projects. Thank you.
