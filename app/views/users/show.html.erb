@@ -20,4 +20,13 @@
   <%= @user.address %>
 </p>
 
+<p>
+  <b>Offers by this user:</b>
+  <ul>
+    <% @user.offers.each do |offer| %>
+      <li> <%= link_to(offer.title, offer)%> </li>
+    <% end %>
+  </ul>
+</p>
+
 <%= link_to 'Back', users_path %>
