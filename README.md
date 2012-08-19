@@ -14,5 +14,8 @@ You can create users, users can login etc. Users can create offers (which might 
 - [bootstrap-rails](https://github.com/anjlab/bootstrap-rails) - A gem porting [Twitter bootstrap](http://twitter.github.com/bootstrap/) to scss and making it available as a gem
 - [carrierwave](https://github.com/jnicklas/carrierwave) - used for picture uploads
 
+# Can I check it out?
+Sure. It's running on [heroku](http://thawing-dusk-1568.herokuapp.com/) just don't user your real email address, password or anything (well the password is encrypted with bcrypt it should be fine but well, just a toy app).
+
 ## Recruiters
 This isn't code I would actually write in an app. It's a **throwaway prototype**. There are no meaningful tests or something... it was fun anyway. So if you want to get a sense of my coding please check out other projects. Thank you.
