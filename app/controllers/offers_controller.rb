@@ -81,4 +81,9 @@ class OffersController < ApplicationController
       format.json { head :no_content }
     end
   end
+  
+  def search
+    @offers = Offer.where('title LIKE ?', params[:offer][:search])
+    render :index
+  end
 end

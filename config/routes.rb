@@ -1,5 +1,7 @@
 Tadaaa::Application.routes.draw do
 
+  get 'offers/search'
+  
   resources :offers
 
   devise_for :users

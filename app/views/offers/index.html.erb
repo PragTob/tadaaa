@@ -1,5 +1,10 @@
 <h1>Listing offers</h1>
 
+<%= form_for(:offer, url: offers_search_path, method: :get) do |f| %>
+  <%= f.text_field :search, class: "input-small", placeholder: "Title" %>
+  <%= f.submit "Search" %>
+<% end %>
+
 <table>
   <tr>
     <th>Title</th>
