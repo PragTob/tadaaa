@@ -1,5 +1,7 @@
 class OffersController < ApplicationController
   load_and_authorize_resource
+  before_filter :only_current_user, only: [:edit, :update, :destroy]
+  
 
   # GET /offers
   # GET /offers.json
@@ -88,4 +90,11 @@ class OffersController < ApplicationController
     @offers = Offer.where('title LIKE ?', params[:offer][:search])
     render :index
   end
+  
+  private
+  def only_current_user
+    offer = Offer.find(params[:id])
+    redirect_to offer, alert: 'You can not edit the information of the offer of another user'  unless current_user == offer.user
+  end
+
 end
